@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+    webapp:
+        build: .
+        volumes:
+         - ./app:/deploy/app
+        ports:
+         - "80:13333"
+        command: python server.py
